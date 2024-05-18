@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>User List Form</title>
+</head>
+<body>
+
+	<th:block th:insert="~{AdminHeader.html}"></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>User List </h5>
+			</div>
+
+			<div class="card-body">
+				<table class="table">
+					<thead>
+					
+						<tr>
+						
+							<th> Name </th>
+							<th> Account Number </th>
+							<th> Balance</th>
+							<th> Actions </th>
+						
+						</tr>
+						
+					</thead>
+				
+					<tbody>
+						
+						<tr th:each="u:${uList}">
+							
+							<td> [[${u.name}]] </td>
+							<td> [[${u.accountnumber}]] </td>
+							<td> [[${u.balance}]] </td>
+							<td>
+								<a th:href="@{/user/edit(id=${u.id})}">
+									<input type="submit" value="Edit" class="btn btn-primary">
+								</a>
+								<a th:href="@{/user/viewDetails(id=${u.id})}">
+									<input type="submit" value="View Details" class="btn btn-warning">
+								</a>
+								<a th:href="@{/user/delete(id=${u.id})}">
+									<input type="submit" value="Delete" class="btn btn-danger">
+								</a>
+
+							</td>
+						</tr>
+					
+					</tbody>
+				
+				</table>
+
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Forget Password Form</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="/signup/fonts/linearicons/style.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/signup/css/style.css">
+
+</head>
+<body>
+
+
+	<div class="wrapper">
+			<div class="inner">
+				<img src="/signup/images/image-1.png" alt="" class="image-1">
+				
+				<form action="/verification" method="post" style="background-color:MintCream">
+
+					<div style="text-align:center">
+						<a href="/forgetPassword" style="display: inline-block;padding: 7px 7px;border-radius:15px;color:white; background-color:green">Back</a>
+					</div><br>
+
+					<h3>Enter your Verification Code</h3>
+					
+					<p style="color:green "> [[${message}]] </p>
+					<p style="color:red "> [[${error}]] </p>
+					
+					
+					<div class="form-holder">
+						<span class="lnr lnr-envelope"></span>
+							<input type="text" class="form-control" name="email" placeholder="Email">
+					</div>
+					
+					<div class="form-holder">
+						<span class="lnr lnr-lock"></span>
+							<input type="text" class="form-control" name="code" placeholder="Code">
+					</div>
+					
+					
+					
+					<button style="border-radius:15px; background-color:MediumPurple">
+						<span>Submit</span>
+					</button><br>
+					
+									
+					
+					
+				</form>
+				<img src="/signup/images/image-2.png" alt="" class="image-2">
+			</div>
+			
+		</div>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+
+</body>
+</html>
+

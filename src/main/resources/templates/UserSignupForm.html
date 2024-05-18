@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Signup Form</title>
+
+</head>
+<body>
+	<th:block th:insert="~{AdminHeader.html}"></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>User Signup Details</h5>
+			</div>
+
+			<div class="card-body">
+				<form action="/userSignupForm" method="post">
+					<div class="row p-2">
+						<div class="col-4">Name</div>
+						<div class="col-6">
+							<input type="text" name="name" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Email</div>
+						<div class="col-6">
+							<input type="email" name="email" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Address</div>
+						<div class="col-6">
+							<input type="text" name="address" class="form-control">
+						</div>
+					</div>
+
+
+					<div class="row p-2">
+						<div class="col-4">Phone number</div>
+						<div class="col-6">
+							<input type="text" name="phone" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Account Number</div>
+						<div class="col-6">
+							<input type="text" name="accountnumber" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Account Balance</div>
+						<div class="col-6">
+							<input type="text" name="balance" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Transaction pin</div>
+						<div class="col-6">
+							<input type="text" name="pin" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Username</div>
+						<div class="col-6">
+							<input type="text" name="username" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Password </div>
+						<div class="col-6">
+							<input type="password" name="password" class="form-control">
+						</div>
+					</div>
+					
+
+					
+					<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Add" class="btn btn-success">
+						</div>
+					</div>
+					<p style="color:red; text-align:center; font-size:20px">[[${error}]]</p>
+					<p style="color:green; text-align:center; font-size:20px">[[${message}]]</p>
+				</form>
+
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>

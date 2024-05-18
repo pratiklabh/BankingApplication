@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Account  Details Form </title>
+</head>
+<body>
+
+	<th:block th:insert=~{UserHeader.html}></th:block>
+	
+	<div class="container-fluid">
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Account Details</h5>
+			</div>
+
+			<div class="card-body">
+				
+				
+				<div class="row p-2">
+					<div class="col-4">Name</div>
+					<div class="col-6">
+						<p class="form-control">[[${name}]]</p>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4">Account Number</div>
+					<div class="col-6">
+						<p class="form-control">[[${accountnumber}]]</p>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4">Balance</div>
+					<div class="col-6">
+						<p class="form-control">[[${balance}]]</p>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4">Email</div>
+					<div class="col-6">
+						<p class="form-control">[[${email}]]</p>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4">UserName</div>
+					<div class="col-6">
+						<p class="form-control">[[${username}]]</p>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4">Phone</div>
+					<div class="col-6">
+						<p class="form-control">[[${phone}]]</p>
+					</div>
+				</div>
+				
+				<div class="row p-2">
+					<div class="col-4">Address</div>
+					<div class="col-6">
+						<p class="form-control">[[${address}]]</p>
+					</div>
+				</div>
+				
+				
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Withdraw Form</title>
+
+</head>
+<body>
+	<th:block th:insert="~{AdminHeader.html}"></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Withdraw Form</h5>
+			</div>
+
+			<div class="card-body">
+				<form action="/withdraw" method="post">
+				
+				
+					<div class="row p-2">
+						<div class="col-4"> Account Number</div>
+						<div class="col-6">
+							<input type="text" name="withdrawaccountnumber" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Account Holder Name</div>
+						<div class="col-6">
+							<input type="text" name="name" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Withdraw Amount </div>
+						<div class="col-6">
+							<input type="text" name="amount" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4"> Admin password </div>
+						<div class="col-6">
+							<input type="password" name="password" class="form-control">
+						</div>
+					</div>
+								
+					
+					<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Withdraw" class="btn btn-success">
+						</div>
+					</div>
+					
+					<p style="color:red; text-align:center; font-size:20px">[[${error}]]</p>
+					<p style="color:green; text-align:center; font-size:20px">[[${message}]]</p>
+					
+
+				</form>
+
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>History</title>
+</head>
+<body>
+
+	<th:block th:insert=~{AdminHeader.html}></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Transaction Details</h5>
+			</div>
+
+			<div class="card-body">
+				
+				<form action="/history" method="post">
+					<div class="row p-2">
+						<div class="col-4"	>Enter the account number</div>
+						<div class="col-6">
+							<select name="accountnumber" class="form-control">
+								<option value="">----- Select Account Number -----</option>
+								<option th:each="u : ${userList}" th:value="${u.accountnumber}">[[${u.accountnumber}]]</option>
+							</select>
+						</div>
+					</div>
+	
+					<div class="row p-2" style="text-align:center">
+
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Show Transactions History" class="btn btn-success">
+						</div>
+
+					</div>
+					
+				</form>
+			
+			</div>
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+
+</body>
+</html>

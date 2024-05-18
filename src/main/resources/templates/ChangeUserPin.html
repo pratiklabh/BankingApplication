@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Change User Pin</title>
+</head>
+<body>
+
+	<th:block th:insert="~{UserHeader.html}"></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>Change Pin</h5>
+			</div>
+
+			<div class="card-body" >
+					<form action="/changeUserPin" method="post">
+					<div class="row p-2">
+						<div class="col-4">Enter Current Pin</div>
+						<div class="col-6">
+							<input type="password" name="oldPin" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Enter New Pin</div>
+						<div class="col-6">
+							<input type="password" name="newPin" class="form-control">
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Re-Enter New Pin </div>
+						<div class="col-6">
+							<input type="password" name="confirmNewPin" class="form-control">
+						</div>
+					</div>
+					
+
+					
+					<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Change Pin" class="btn btn-success">
+						</div>
+					</div>
+					<p style="color:red; text-align:center; font-size:20px">[[${error}]]</p>
+					<p style="color:green; text-align:center; font-size:20px">[[${message}]]</p>
+				</form>
+				
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+	
+
+</body>
+</html>

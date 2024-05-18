@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- LINEARICONS -->
+<link rel="stylesheet" href="/signup/fonts/linearicons/style.css">
+
+<!-- STYLE CSS -->
+<link rel="stylesheet" href="/signup/css/style.css">
+
+</head>
+<body>
+
+
+	<div class="wrapper">
+		<div class="wrapper" style="padding: 100px; text-align: center;">
+			<div class="inner">
+
+			<img src="/signup/images/image-1.png" alt="" class="image-1">
+
+				<!-- Admin Login Button -->
+				<form action="/adminLogin" method="get"
+					style="background-color: black;">
+					<button type="submit"
+						style="cursor: pointer; font-size: 20px; color: black; margin-top:10px">Admin
+						Login</button>
+				</form>
+
+				<!-- User Login Button -->
+				<form action="/userLogin" method="get"
+					style="background-color: black">
+					<button type="submit"
+						style="cursor: pointer; font-size: 20px; color: black;margin-top:10px">User
+						Login</button>
+				</form>
+				<img src="/signup/images/image-2.png" alt="" class="image-2">
+
+			</div>
+		</div>
+
+
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

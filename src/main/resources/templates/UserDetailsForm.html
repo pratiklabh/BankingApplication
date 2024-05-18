@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Details Form</title>
+
+</head>
+<body>
+	<th:block th:insert="~{AdminHeader.html}"></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>User Details</h5>
+			</div>
+
+			<div class="card-body" th:each="u: ${uModel}">
+				<form action="/userList" method="post">
+					<div class="row p-2">
+						<div class="col-4">Name</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.name}"></span>
+							</p>
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Email</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.email}"></span>
+							</p>
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-4">Address</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.address}"></span>
+							</p>
+						</div>
+					</div>
+
+
+					<div class="row p-2">
+						<div class="col-4">Phone number</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.phone}"></span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Account Number</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.accountnumber}"></span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Account Balance</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.balance}"></span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Transaction pin</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.pin}"></span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Username</div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.username}"></span>
+							</p>
+						</div>
+					</div>
+					
+					<div class="row p-2">
+						<div class="col-4"> Password </div>
+						<div class="col-6">
+							<p class="form-control" >
+								<span th:text="${u.password}"></span>
+							</p>
+						</div>
+					</div>
+					
+
+					
+					<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Back" class="btn btn-success">
+						</div>
+					</div>
+					
+				</form>
+
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>

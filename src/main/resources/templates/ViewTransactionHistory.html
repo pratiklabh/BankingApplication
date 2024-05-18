@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>View Transaction History</title>
+</head>
+<body>
+
+	<th:block th:insert="~{UserHeader.html}"></th:block>
+	
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white">
+				<h5>User Details</h5>
+			</div>
+
+			<div class="card-body" >
+					<h3 style="text-align:center; background-color:green; color:white">Deposit History</h3>
+					<table class="table"  style="text-align:center">
+						<thead>
+							<tr>
+								<th> Account Number </th>
+								<th> Name </th>
+								<th> Deposited Amount</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr th:each="d:${dList}">
+								<td>[[${d.recipientaccountnumber}]]</td>
+								<td>[[${d.name}]]</td>
+								<td>[[${d.amount}]]</td>						
+							</tr>
+							
+						</tbody>
+					</table>
+					
+				<h3 style="text-align:center; background-color:red; color:white">Withdraw History</h3>
+				<table class="table" style="text-align:center">
+					<thead>
+						<tr>
+							<th> Account Number </th>
+							<th> Name </th>
+							<th> Withdrawn Amount</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr th:each="w:${wList}">
+							<td>[[${w.withdrawaccountnumber}]]</td>
+							<td>[[${w.name}]]</td>
+							<td>[[${w.amount}]]</td>						
+						</tr>
+						
+					</tbody>
+				</table>
+				
+				<h3 style="text-align:center; background-color:purple; color:white">Amount Transfer History</h3>
+				<table class="table" style="text-align:center">
+					<thead>
+						<tr>
+							<th> Sender Account Number </th>
+							<th> Sender Name </th>
+							<th> Transferred Amount</th>
+							<th> Recipient Name</th>
+							<th> Recipient Account Number</th>
+							
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr th:each="s:${sList}">
+							<td>[[${s.accountnumber}]]</td>
+							<td>[[${s.name}]]</td>
+							<td>[[${s.amount}]]</td>
+							<td>[[${s.recipientname}]]</td>
+							<td>[[${s.recipientaccountnumber}]]</td>						
+						</tr>
+						<tr th:each="r:${rList}">
+							<td>[[${r.accountnumber}]]</td>
+							<td>[[${r.name}]]</td>
+							<td>[[${r.amount}]]</td>
+							<td>[[${r.recipientname}]]</td>
+							<td>[[${r.recipientaccountnumber}]]</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				
+				
+				
+			</div>
+
+			<div class="card-footer  bg-warning text-center ">BankingApp@2024</div>
+
+
+		</div>
+
+
+	</div>
+	
+
+</body>
+</html>
